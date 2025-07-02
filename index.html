@@ -2,15 +2,18 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-$.get("navigation.html", function(data){
-    $("#nav-placeholder").replaceWith(data);
-});
-</script>
+    <script>
+        $(document).ready(function() {
+            $('#result').load('nav.html #nav', function() {
+                alert("loaded");
+            });
+        });
+    </script>
 </head>
 <body>
+Test?????
 
-<div id="nav-placeholder"></div>
+<div id="result"></div>
 
 <p>
 Hello! I'm <strong>Ben</strong>. I'm an <b>epic coder!!!!</b>
