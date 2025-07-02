@@ -3,11 +3,9 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-$(document).ready(
-	$(function(){
-	  $("#nav-placeholder").load("nav.html");
-	});
-  );
+$.get("navigation.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});
 </script>
 </head>
 <body>
